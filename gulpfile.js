@@ -93,7 +93,7 @@ gulp.task('fonts', function () {
 gulp.task('pages', function () {
   src.pages = ['pages/**/*', 'layouts/**/*', 'partials/**/*'];
   return gulp.src(src.pages[0])
-    .pipe($.if(/\.jade$/, $.jade({
+    .pipe($.if(/\.pug$/, $.pug({
       pretty: !RELEASE,
       locals: {
         pkgs: pkgs,
@@ -110,10 +110,19 @@ gulp.task('pages', function () {
 
 // CSS style sheets
 gulp.task('styles', function () {
+  var bourbon = require('bourbon').includePaths;
+  var neat = require('bourbon-neat').includePaths;
+  var normalize = require('node-normalize-scss').includePaths;
+
   src.styles = 'styles/**/*.{css,scss}';
+
   return gulp.src('styles/style.scss')
     .pipe($.if(!RELEASE, $.sourcemaps.init()))
-    .pipe($.sass())
+    .pipe($.sass({
+        includePaths: [].concat(normalize, bourbon, neat),
+        errLogToConsole: true,
+        outputStyle: 'expanded' // Options: nested, expanded, compact, compressed
+    }))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe($.csscomb())
     .pipe(RELEASE ? $.cssmin() : $.util.noop())
