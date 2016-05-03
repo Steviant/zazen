@@ -1,4 +1,4 @@
-<img src="http://i.imgur.com/EohdCC9.png" style="width:66px;">
+<img src="http://i.imgur.com/EohdCC9.png" width="66px">
 
 ## Static site enlightenment
 
