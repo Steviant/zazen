@@ -15,17 +15,8 @@ html(class='no-js', lang='')
     link(rel='stylesheet', href='css/style.css')
 
   body
-    <!--[if lt IE 8]>
-    p.browserupgrade.
-      You are using an <strong>outdated</strong> browser.
-      Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    <![endif]-->
-
     block body
 
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/#{pkgs.jquery}/jquery.min.js')
-    script.
-      window.jQuery || document.write('<script src="vendor/#{pkgs.jquery}/jquery.min.js"><\/script>')
     script(src='js/bundle.js')
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
