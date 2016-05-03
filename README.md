@@ -1,12 +1,14 @@
-## Static Website Starter Kit &nbsp; [![Tips](http://img.shields.io/gratipay/koistya.svg?style=flat)](https://gratipay.com/koistya)
+## Zazen
 
 > This is a static site project template powered by [Gulp](http://gulpjs.com/),
-> [Jade](http://jade-lang.com/), [Bootstrap](http://getbootstrap.com/),
-> [LESS](http://lesscss.org/) and [BrowserSync](http://www.browsersync.io).
+> [Pug](https://github.com/pugjs/pug),
+> [Sass](http://sass-lang.com/) and [BrowserSync](http://www.browsersync.io).
+
+Originally forked from Kriasoft's [Static Site Starter Kit](https://github.com/kriasoft/static-site-starter)
 
 #### Getting Started
 
- 1. [Fork this repo](https://github.com/kriasoft/static-site-starter/fork) and
+ 1. [Fork this repo](https://github.com/steviant/zazen/fork) and
     rename it under your own GitHub account
  2. Open it in [GitHub for Mac](https://mac.github.com/)
     (or [GitHub for Windows](https://windows.github.com/)) and start hacking
