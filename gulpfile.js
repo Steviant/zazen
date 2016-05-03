@@ -110,10 +110,10 @@ gulp.task('pages', function () {
 
 // CSS style sheets
 gulp.task('styles', function () {
-  src.styles = 'styles/**/*.{css,less}';
-  return gulp.src('styles/bootstrap.less')
+  src.styles = 'styles/**/*.{css,scss}';
+  return gulp.src('styles/style.scss')
     .pipe($.if(!RELEASE, $.sourcemaps.init()))
-    .pipe($.less())
+    .pipe($.sass())
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe($.csscomb())
     .pipe(RELEASE ? $.cssmin() : $.util.noop())
