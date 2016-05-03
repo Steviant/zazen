@@ -34,9 +34,9 @@ I really like Proteus, particularly the Middleman kit, but I got sick of Ruby's 
 
  1. [Fork](https://github.com/steviant/zazen/fork) or [download](https://github.com/Steviant/zazen/archive/master.zip) this repo.
  2. Open the directory in your terminal and enter:
- ```sh
- $ npm install
- ```
+   ```sh
+   $ npm install
+   ```
 
 #### Questions & Answers
 
